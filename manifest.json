@@ -1,0 +1,15 @@
+{
+  "app": {
+    "background": {
+      "scripts": ["background.js"]
+    }
+  },
+  "manifest_version": 2,
+  "name": "Boston Swing Central Email Signup",
+  "version": "0.1",
+
+  "description": "Sign up for BSC email list",
+  "icons": {"16": "calculator-16.png", "128": "calculator-128.png"},
+
+  "author": "Ken Thomas"
+}
