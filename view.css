@@ -16,6 +16,15 @@ body
 	width:640px;
 }
 
+.show_emails
+{
+	background:#fff;
+
+	margin:0 auto;
+	text-align:left;
+	width:640px;
+}
+
 #top
 {
 	display:block;
@@ -864,4 +873,21 @@ font-weight: bold;
 
 .thankYouMessage {
 	display: none;
+}
+
+#delete_emails {
+	display: none;
+}
+.email_list {
+	list-style-type: none;
+	display: none;
+}
+
+#li_2 {
+	list-style-type: none;
+}
+
+.indent {
+	margin:20px 20px 0;
+	padding:20px 0 20px;
 }
