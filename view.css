@@ -23,6 +23,7 @@ body
 	margin:0 auto;
 	text-align:left;
 	width:640px;
+	display: none;
 }
 
 #top
@@ -875,12 +876,8 @@ font-weight: bold;
 	display: none;
 }
 
-#delete_emails {
-	display: none;
-}
 .email_list {
 	list-style-type: none;
-	display: none;
 }
 
 #li_2 {
