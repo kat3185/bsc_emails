@@ -4,9 +4,14 @@ const DB_STORE_NAME = "emails";
 
 document.onkeydown=function() {
     if(window.event.keyCode=='13'){
+      if ($('.password_attempt').is(':focus')){
+        $('#show_emails').click();
+      } else {
         $('form').submit();
+      }
     }
 };
+
 
 $('form').submit(function(event) {
   event.preventDefault();
@@ -57,15 +62,17 @@ $('#show_emails').click(function(event) {
     .then(function(emails) {
       $('.email_list').html(emails.join()).fadeIn(1500, function() {});
       $('#delete_emails').fadeIn(1500, function() {});
+      $('.password_attempt').val('');
     });
   } else {
-    $('.email_list').html('That password was incorrect.  You bad.').fadeIn(1500, function() {});
+    $('.email_list').html('That password was incorrect.  You bad.').fadeIn(1500, function() {}).fadeOut(3000, function() {});
     $('#delete_emails').fadeOut(1500, function() {});
+    $('.password_attempt').val('');
   }
 });
 
 $('#delete_emails').click(function(event) {
-  localforage.clear();
+  localforage.removeItem('emails');
   $('.email_list').fadeOut(1500, function() {});
   $('#delete_emails').fadeOut(1500, function() {});
 });
