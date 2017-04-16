@@ -10,6 +10,7 @@
   "version": "0.1",
 
   "description": "Sign up for BSC email list",
+  "icons": { "16": "bsc_favicon.png", "128": "bsc_favicon.png" },
 
   "author": "Ken Thomas",
   "permissions": [
